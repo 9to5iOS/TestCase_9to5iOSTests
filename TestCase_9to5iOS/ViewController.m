@@ -19,6 +19,16 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(NSString*)reverseString:(NSString*)testString
+{
+   
+    int len =(int) [testString length];
+    NSMutableString *result = [[NSMutableString alloc] initWithCapacity:len];
+    for (int i = len - 1; i >= 0; i--) {
+        [result appendFormat:@"%c", [testString characterAtIndex:i]];
+    }
+    return result;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
